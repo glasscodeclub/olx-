@@ -1,80 +1,96 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
 
-    <head>
-        <!-- Compiled and minified CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- ######## Meta tags  -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- ########### Links -->
 
-        <!-- Compiled and minified JavaScript -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    </head>
+        <!-- ------FONTS---- -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+        
+        <!-- Bootstrap css -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
 
-    <body style="display:flex;align-items:center; justify-content: center;">
-        <div class="row">
-            <div class="col" style="width:500px">
-                <form method="post">
-                    <div class="card darken-1">
-                        <div class="card-content">
-                            <% if(locals.message){ %>
-                            <%=message %>
-                            <% } %>
-                            <div class="row">
-                                <div class="col s12">
-                                    <ul class="tabs">
-                                        <li class="tab col s3"><a class="active" href="#test1">Login</a></li>
-                                        <li class="tab col s3"><a href="#test2">SignUp</a></li>
-                                    </ul>
-                                </div>
-                                <div id="test1" class="col s12">
-                                    <form method="post">
-                                        <div class="row" style="margin-top:50px;">
-                                            <div class="input-field col s12">
-                                                <input name="email" id="first_name" type="email" class="validate">
-                                                <label for="first_name">Email</label>
-                                            </div>
-                                            <div class="input-field col s12">
-                                                <input name="password" id="first_name" type="password" class="validate">
-                                                <label for="first_name">Password</label>
-                                            </div>
-                                        </div>
-                                        <div class="card-action" style="text-align: right">
-                                            <button name="action" value="login" style="color: orange"
-                                                class="btn-flat modal-trigger">Login</button>
-                                        </div>
-                                    </form>
-                                </div>
-                                <div id="test2" class="col s12">
-                                    <form method="post">
-                                        <div class="row" style="margin-top:50px;">
-                                            <div class="input-field col s12">
-                                                <input name="email" id="first_name" type="email" class="validate">
-                                                <label for="first_name">Email</label>
-                                            </div>
-                                            <div class="input-field col s12">
-                                                <input name="password" id="first_name" type="password" class="validate">
-                                                <label for="first_name">Password</label>
-                                            </div>
-                                            <div class="input-field col s12">
-                                                <input name="title" id="first_name" type="password" class="validate">
-                                                <label for="first_name">Confirm Password</label>
-                                            </div>
-                                        </div>
-                                        <div class="card-action" style="text-align: right">
-                                            <button name="action" value="signup" style="color: orange"
-                                                class="btn-flat modal-trigger">Sign
-                                                Up</button>
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
+        <!-- ---- font awesome ---- -->
+        <script src="https://kit.fontawesome.com/e5a9d749f9.js" crossorigin="anonymous"></script>
+        
+        <!-- ############ page css -->
+
+        <link rel="stylesheet" href="../public/css/login.css">
+
+    <!-- Title -->
+
+    <title>Olx-copy</title>
+
+</head>
+
+<body>
+    
+    <div class=" container ">
+        <img src="../public/img/business.svg" class= "side-img" >
+        <img src="../public/img/bottom.svg" class="bottom-img">
+        <img src="../public/img/bottom.svg" class="top-img">
+        
+        <!-- ------LOGIN FORM ----- -->
+        <div class="login-form">
+            <form class="needs-validation" novalidate>
+                <img src="../public/img/profile.svg" class="profile-pic">
+                <h2>welcome</h2>
+                <div class="form-floating mb-3">
+                  <input type="email" class="form-control" id="Email" placeholder="Email" required>
+                  <label for="name" class="form-label"><i class="fas fa-user"></i> &nbsp &nbsp Email Address</label>
+                  <div class="invalid-feedback">
+                     Please Enter a valid email!
+                  </div>
+                </div>
+                <div class="form-floating">
+                  <input type="password" class="form-control" id="Password" placeholder="Password" required>
+                  <label for="Password" class="form-label"><i class="fas fa-lock"></i> &nbsp &nbsp Password</label>
+                  <div class="invalid-feedback">
+                    Please enter your password!
+                  </div>
+                </div>
+                  <div class="form-check checkbox">
+                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                    <label class="form-check-label" for="invalidCheck">
+                      Agree to terms and conditions
+                    </label>
+                    <div class="invalid-feedback">
+                      You must agree before submitting.
                     </div>
-            </div>
+                    
+                  </div>
+                  <div class="submit-btn">
+                    <button class="btn btn-primary" type="submit">Submit form</button>
+                  </div>
+                 
+                </div>
+              </form>
         </div>
-    </body>
-    <script>
-        var el = document.querySelectorAll('.tabs');
-        var instance = M.Tabs.init(el);
-    </script>
+    </div>
+
+</body>
+
+<!-- ######### Scripts -->
+
+<!-- ######## Js script -->
+
+    <script src="../public/js/login.js"></script>
+
+    <!-- Bootstrap js bundle-->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+
 
 </html>
+
+
+<% if(locals.message){ %>
+<%=message %>
+<% } %> 
