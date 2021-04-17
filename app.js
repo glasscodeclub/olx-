@@ -19,9 +19,10 @@ app.get('/', (req, res) => {
     })
 })
 
+app.use("/public", express.static("public"))
 app.use('/user', userController)
 app.use('/ad', adController)
 
-app.listen(3000, () => {
+app.listen(4000, () => {
     console.log("Server is running")
 })
