@@ -1,30 +1,59 @@
-<h1>Post a free Ad</h1>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
 
-<form method="post">
-    <input name="name" placeholder="Name" required />
-    <br /><br />
-    <button type="submit">
-        Submit
-    </button>
-</form>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+    <!-- Links -->
 
-<h1>Your Ads</h1>
-<table>
-    <tr>
-        <th>#</th>
-        <th>Name</th>
-        <th></th>
-    </tr>
-    <tr>
-        <% for(var i = 0; i < ads.length; i++) { %>
-        <td><%=i+1 %></td>
-        <td><%=ads[i].name %></td>
-        <td>
-            <a href="/user/ad/<%=ads[i].id %>/chats">
-                show chats
-            </a>
-        </td>
-        <% } %>
-    </tr>
-</table>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
+      crossorigin="anonymous"
+    />
+
+    <!-- Title -->
+    <title>user</title>
+  </head>
+  <body>
+    <%- include('header') %>
+    <div class="wrapper">
+      <div class="left">
+        <div class="profile"></div>
+        <div class="post-ad">
+          <h1>Post a free Ad</h1>
+          <form method="post">
+            <input name="name" placeholder="Name" required />
+            <br /><br />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+      <div class="right">
+        <div class="your-ads">
+          <h1>Your Ads</h1>
+          <table>
+            <tr>
+              <th>#</th>
+              <th>Name</th>
+              <th></th>
+            </tr>
+            <tr>
+              <% for(var i = 0; i < ads.length; i++) { %>
+              <td><%=i+1 %></td>
+              <td><%=ads[i].name %></td>
+              <td>
+                <a href="/user/ad/<%=ads[i].id %>/chats"> show chats </a>
+              </td>
+              <% } %>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

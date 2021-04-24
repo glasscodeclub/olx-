@@ -1,0 +1,28 @@
+nav{
+    z-index: 50;
+    background-color: #3d8bfd;
+}
+
+.Title-logo{
+    height: 40px;
+}
+
+.search-bar{
+    border-radius: 70px;
+    width: 300px;
+}
+
+.button-search{
+    border-radius: 70px;
+    white-space: nowrap;
+}
+
+.button-search a{
+    color: #000;
+}
+
+.login li a{
+    color: white;
+}
+
+
