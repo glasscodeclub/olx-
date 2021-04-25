@@ -85,6 +85,7 @@ router.get('/ad/:id/chats', checkLogIn, async (req, res) => {
     let messages = await Message.find({ adId: req.params.id })
     messages = _.groupBy(messages, 'userId')
     messages = _.map(messages, (value) => { return value })
+    
     res.render('ownerchats', { user: req.session.user, messages: messages })
 })
 router.post('/ad/:id/chats', urlencodedParser, checkLogIn, (req, res) => {

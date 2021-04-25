@@ -12,6 +12,7 @@
               <%}%>
           <%}%> 
     </head>
+  
 <!-- diffrent user -->
 <% for(var i=0; i < messages.length; i++){ %>
 
@@ -19,9 +20,9 @@
 <% for(var j=0; j < messages[i].length; j++){ %>
 <h4>
     <% if(messages[i][j].from == 'user') { %>
-    User:
+    <%= messages[i][j].userId %> : 
     <% }else{ %>
-    You:
+    You : 
     <% } %>
     <%=messages[i][j].message %>
 </h4>
