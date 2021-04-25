@@ -18,7 +18,13 @@
 
       <!-- CSS Links -->
         <link rel="stylesheet" href="../public/css/index.css" />
-
+        <%if(user!=null){%>
+          <%if(user&&user.email){%>   
+            <title><%=user.email%></title>
+            <%}else{%>
+            <title>welcome</title>
+            <%}%>
+        <%}%> 
 
   </head>
   <body>

@@ -15,9 +15,13 @@
     <link rel="stylesheet" href="../public/css/ad.css">
     
     <!-- Title -->
-    
-    <title>Document</title>
-
+    <%if(user!=null){%>
+      <%if(user&&user.email){%>   
+        <title><%=user.email%></title>
+        <%}else{%>
+        <title>welcome</title>
+        <%}%>
+    <%}%> 
 </head>
 <body>
     <%- include('header') %>

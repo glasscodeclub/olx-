@@ -3,9 +3,19 @@
       rel="stylesheet"
       integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
       crossorigin="anonymous"/>
-
+    <head>
+        <%if(user!=null){%>
+            <%if(user&&user.email){%>   
+              <title><%=user.email%></title>
+              <%}else{%>
+              <title>welcome</title>
+              <%}%>
+          <%}%> 
+    </head>
+<!-- diffrent user -->
 <% for(var i=0; i < messages.length; i++){ %>
 
+    <!-- messages -->
 <% for(var j=0; j < messages[i].length; j++){ %>
 <h4>
     <% if(messages[i][j].from == 'user') { %>

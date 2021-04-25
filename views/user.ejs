@@ -17,7 +17,13 @@
     />
 
     <!-- Title -->
-    <title>user</title>
+    <%if(user!=null){%>
+      <%if(user&&user.email){%>   
+        <title><%=user.email%></title>
+        <%}else{%>
+        <title>welcome</title>
+        <%}%>
+    <%}%> 
   </head>
   <body>
     <%- include('header') %>
