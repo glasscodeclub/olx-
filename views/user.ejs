@@ -16,6 +16,12 @@
       crossorigin="anonymous"
     />
 
+     <!-- Google Fonts -->
+     <link rel="preconnect" href="https://fonts.gstatic.com">
+     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="../public/css/user.css">
+
     <!-- Title -->
     <%if(user!=null){%>
       <%if(user&&user.email){%>   
@@ -29,37 +35,54 @@
     <%- include('header') %>
     <div class="wrapper">
       <div class="left">
-        <div class="profile"></div>
+        <div class="profile">
+          <div class="profile-pic">
+            <img src="../public/img/profile.svg" alt="profile">
+          </div>
+          <!-- <div class="profile-body"> -->
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            </p>
+            <button type="submit" class="  btn btn-warning button-search ">Edit Profile</button>
+            
+          <!-- </div> -->
+        </div>
         <div class="post-ad">
           <h1>Post a free Ad</h1>
-          <form method="post">
-            <input name="name" placeholder="Name" required />
-            <br /><br />
-            <button type="submit">Submit</button>
+          <form method="post" class="needs-validation" novalidate>
+            <div class="form-floating mb-3">
+              <input type="text" class="form-control" id="floatingInput" name="name" placeholder="Name" required>
+              <label for= "floatingInput" >Ad Name</label>
+              <div class="invalid-feedback">This field is required</div>
+            </div>            
+            <div class="post-ad-btn">
+              <button type="submit" class="btn btn-warning button-search" id="post-ad">Submit</button>
+            </div> 
+            
           </form>
         </div>
       </div>
       <div class="right">
-        <div class="your-ads">
-          <h1>Your Ads</h1>
-          <table>
-            <tr>
-              <th>#</th>
-              <th>Name</th>
-              <th></th>
-            </tr>
-            <tr>
-              <% for(var i = 0; i < ads.length; i++) { %>
-              <td><%=i+1 %></td>
-              <td><%=ads[i].name %></td>
-              <td>
-                <a href="/user/ad/<%=ads[i].id %>/chats"> show chats </a>
-              </td>
-              <% } %>
-            </tr>
-          </table>
+        <h1>Your Ads</h1><hr>
+        <div class="your-ads row">  
+          <% for(var i = 0; i < ads.length; i++) { %>
+            <div class="card col-sm-6 col-md-4 card-item" style="width: 18rem;">
+              <img src="../public/img/Laptop.jpg" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title"><%=ads[i].name %></h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="/user/ad/<%=ads[i].id %>/chats" class="btn btn-primary">Show Chats</a>
+              </div>
+            </div>
+          <% } %>
         </div>
       </div>
     </div>
   </body>
 </html>
+<!-- 
+<div class="form-floating mb-3">
+  <input type="text" class="form-control" id="floatingInput" name="name" placeholder="Name" required>
+  <label for= "Ad Name" ></label>  </label>
+</div> -->
+
+<script src="../public/js/user-page.js"></script>

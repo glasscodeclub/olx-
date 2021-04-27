@@ -67,8 +67,11 @@
                             <small><a href="/user/login">Already have an account</a></small>
                         </div> -->
                         <div class="submit-btn mb-3">
-                            <button name="action" value="login" class="btn btn-primary" type="submit">Submit form</button>
+                            <button name="action" value="login" class="btn btn-primary" type="submit">Login</button>
                         </div>
+                        <% if(locals.message){ %>
+                            <%=message %>
+                            <% } %>
                     </form>
                 </div>
                 <div id="test2">
@@ -106,7 +109,7 @@
                             </div>
                         </div>
                         <div class="submit-btn mb-3">
-                            <button name="action" value="signup" class="btn btn-primary" type="submit">Submit form</button>
+                            <button name="action" value="signup" class="btn btn-primary" type="submit">SignUp</button>
                         </div>
                     </form>
                 </div>
@@ -129,6 +132,3 @@
 
 </html>
 
-<% if(locals.message){ %>
-  <%=message %>
-  <% } %>
