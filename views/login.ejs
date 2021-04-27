@@ -20,11 +20,7 @@
 
         <!-- Page CSS -->
         <link rel="stylesheet" href="../public/css/login.css">
-
-        
-
-    </head>
-
+  
     <body>
         <div class="container-body">
 
@@ -42,23 +38,23 @@
                     
                 <div id="test1">
                     <form method="post" class="needs-validation" novalidate>
-                        <img src="../public/img/profile.svg" class="profile-pic">
+                        <img src="../public/img/OLX Clone logo.png" class="profile-pic">
                         <!-- <h2>Login</h2> -->
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="Email" placeholder="Email" required>
+                            <input type="email" class="form-control" id="Email" placeholder="Email" name="email" required>
                             <label for="name" class="form-label"><i class="fas fa-user"></i> &nbsp &nbsp Email Address</label>
                             <div class="invalid-feedback">
                                 Please Enter a valid email!
                             </div>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="password" class="form-control" id="Password" placeholder="Password" required>
+                            <input type="password" class="form-control" id="Password" placeholder="Password" name="password" required>
                             <label for="Password" class="form-label"><i class="fas fa-lock"></i> &nbsp &nbsp Password</label>
                             <div class="invalid-feedback">
                                Please enter your password!
                             </div>
                         </div>
-                        <div class="form-check checkbox mb-3">
+                        <!-- <div class="form-check checkbox mb-3">
                             <input class="form-check-input" type="checkbox" id="invalidCheck" required>
                             <label class="form-check-label" for="invalidCheck">
                                 Agree to terms and conditions
@@ -66,35 +62,38 @@
                             <div class="invalid-feedback">
                                 You must agree before submitting.
                             </div>
-                        </div>
+                        </div> -->
                         <!-- <div class="login-redirect">
                             <small><a href="/user/login">Already have an account</a></small>
                         </div> -->
                         <div class="submit-btn mb-3">
-                            <button name="action" value="login" class="btn btn-primary" type="submit">Submit form</button>
+                            <button name="action" value="login" class="btn btn-primary" type="submit">Login</button>
                         </div>
+                        <% if(locals.message){ %>
+                            <%=message %>
+                            <% } %>
                     </form>
                 </div>
                 <div id="test2">
                     <form method="post" class="needs-validation" novalidate>
-                        <img src="../public/img/profile.svg" class="profile-pic">
+                        <img src="../public/img/OLX Clone logo.png" class="profile-pic">
                         <!-- <h2>welcome</h2> -->
                         <div class="form-floating mb-3">
-                            <input type="text" class="form-control" id="First-name" placeholder="First-Name" required>
+                            <input type="text" class="form-control" id="First-name" placeholder="First-Name" name="fisrtName" required>
                             <label for="first-name" class="form-label"><i class="fas fa-user"></i> &nbsp &nbsp First-Name</label>
                             <div class="invalid-feedback">
                                 This field can't be empty!
                             </div>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="email" class="form-control" id="Email-signup" placeholder="Email" required>
+                            <input type="email" class="form-control" id="Email-signup" placeholder="Email" name="email" required>
                             <label for="Email-signup" class="form-label"><i class="fas fa-at"></i> &nbsp &nbsp Email Address</label>
                             <div class="invalid-feedback">
                                 Please Enter a valid email!
                             </div>
                         </div>
                         <div class="form-floating mb-3">
-                            <input type="password" class="form-control" id="Password" placeholder="Password" required>
+                            <input type="password" class="form-control" id="Password" placeholder="Password" name="password" required>
                             <label for="Password" class="form-label"><i class="fas fa-lock"></i> &nbsp &nbsp Password</label>
                             <div class="invalid-feedback">
                                Please enter your password!
@@ -110,7 +109,7 @@
                             </div>
                         </div>
                         <div class="submit-btn mb-3">
-                            <button name="action" value="signup" class="btn btn-primary" type="submit">Submit form</button>
+                            <button name="action" value="signup" class="btn btn-primary" type="submit">SignUp</button>
                         </div>
                     </form>
                 </div>
@@ -133,6 +132,3 @@
 
 </html>
 
-<% if(locals.message){ %>
-  <%=message %>
-  <% } %>

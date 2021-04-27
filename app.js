@@ -12,11 +12,32 @@ var userController = require('./controllers/user.js')
 var adController = require('./controllers/ad.js')
 
 var Ad = require("./models/ad")
+var _ =require("lodash")
 
 app.get('/', (req, res) => {
-    Ad.find({}, (err, docs) => {
-        res.render('index', { user: req.session.user, ads: docs })
-    })
+    if(req&&req.session&&req.session.user&&req.session.user._id){
+        let username =req.session.user._id;
+        Ad.find({"postedBy": { "$ne":username } }, (err, docs) => {
+            if (err) {
+                // console.log(err, 'error')
+                return res.send(err)
+            }
+            if (_.isEmpty(docs)) {
+                res.render('index', { user: req.session.user, ads: []})
+            } else {
+                res.render('index', { user: req.session.user, ads: docs })
+            }
+        })
+    }
+    else{
+        Ad.find({ }, (err, docs) => {
+    
+                res.render('index', { user: req.session.user, ads: docs })
+   
+        })
+      
+    }
+
 })
 
 app.use("/public", express.static("public"))
