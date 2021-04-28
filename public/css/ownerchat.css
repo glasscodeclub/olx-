@@ -49,7 +49,9 @@ img{
 }
 
 .description{
-    border: 1px rgba(56, 56, 56, 0.5) solid;
+    /* border: 1px rgba(56, 56, 56, 0.5) solid; */
+    padding: 5% 0;
+    white-space: normal;
     border-radius: 5px;
 }
 
@@ -62,6 +64,8 @@ img{
 
 .minor{
     width: 40%;
+    overflow: scroll;
+    height: 700px
 }
 
 .price{
@@ -75,7 +79,7 @@ img{
     border: 1px rgba(0,0,0,0.5) solid;
     margin-bottom: 2%;
     padding: 5%;
-    max-height: 300px;
+    max-height: 340px;
     height: fit-content;
     border-radius: 5px;
     overflow: hidden;
@@ -128,6 +132,17 @@ img{
     width: 100%;
 }
 
+input.message{
+    width: 70%;
+    margin: 0;
+    padding: 3%;
+    font-size: 1.2rem;
+    display: inline-block;
+}
+
+input.message:focus{
+    border: 4px  rgba(61, 139, 253, 0.5 ) solid ;
+}
 
 /* Media Queries */
 

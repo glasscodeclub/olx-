@@ -60,3 +60,27 @@ body{
     background-color: #0d6efd;
     height: 200px;
 }
+
+
+@media only screen and (max-width:540px)
+{
+    body{
+        overflow-x: hidden;
+        width: 100%;
+    }
+    
+    .landing-text{
+        margin-top: 0;
+        padding: 0;
+    }
+
+    .landing-text h1{
+        padding: 0%;
+        font-size: 3rem;
+    } 
+
+    .landing-text h4{
+        padding: 0 2.5%;
+    }
+
+}

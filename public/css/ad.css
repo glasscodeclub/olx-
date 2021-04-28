@@ -49,7 +49,9 @@ img{
 }
 
 .description{
-    border: 1px rgba(56, 56, 56, 0.5) solid;
+    /* border: 1px rgba(56, 56, 56, 0.5) solid; */
+    padding: 5% 0;
+    white-space: normal;
     border-radius: 5px;
 }
 
@@ -107,6 +109,10 @@ img{
     width: 90px;
 }
 
+.details{
+    white-space: normal;
+}
+
 .contact-but{
     text-align: center;
     padding-top: 5%;
@@ -114,11 +120,17 @@ img{
 
 .contact-but .button{
     border-radius: 50px;
-    width: 50%;
+    max-width: 200px;
+    width: 65%;
 }
 
 .contact-but a{
     text-decoration: none;
+    white-space: nowrap;
+    color: #000;
+}
+
+.contact-but a:hover{
     color: #000;
 }
 
@@ -127,6 +139,7 @@ img{
     height: 300px;
     width: 100%;
 }
+
 
 
 /* Media Queries */
