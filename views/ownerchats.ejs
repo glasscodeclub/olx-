@@ -10,6 +10,7 @@
       crossorigin="anonymous"/>
 
     <link rel="stylesheet" href="/public/css/ownerchat.css"> 
+    <link rel="stylesheet" href="/public/css/common.css"> 
 
 
     <%if(user!=null){%>
@@ -64,15 +65,25 @@
                 
             </div>
         </div>
+        <input type="hidden" id="length" value="<%= messages.length %>">
 
         <div class="minor">
+          <% for(var i=0; i < messages.length; i++){ %>
+
             <div class="chats">
                 <div class="chat-head">
-                    <h2>Chats</h2>
+                    <h2>Chat 
+                    <%= messages[i][0].userId %>
+                  </h2>
+                    <hr>
                 </div>
-                <div class="chat-body">
+                <div class="chat-body" id="check<%= i %>">
+                <script>
+                  var objDiv = document.getElementById("check<%= i %>");
+                  objDiv.scrollTop = objDiv.scrollHeight;
+                </script>
                     <!-- diffrent user -->
-                    <% for(var i=0; i < messages.length; i++){ %>
+                   
 
                         <!-- messages -->
                         <% for(var j=0; j < messages[i].length; j++){ %>
@@ -87,16 +98,17 @@
                         <% } %>
                         <form method="post">
                         <input type="hidden" name="userid" value="<%=messages[i][0].userId %>" />
-                        <input name="message" />
-                        <button type="submit">send</button>
+                        <input name="message" class="message" class="form-control" />
+                        <button type="submit" class="btn btn-warning button-search" >send</button>
                         </form>
-                    <% } %>
+                   
                 </div>
             </div>
+          <% } %>
         </div>
     </div>
 </body>
-<script src="/public/js/ad.js"></script>
+<script src="/public/js/ownerchat.js"></script>
 </html>
 
 

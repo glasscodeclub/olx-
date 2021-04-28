@@ -63,15 +63,15 @@
               <button class="btn btn-warning button-search" type="submit"><i class="fas fa-search"></i> Search</button>
               <li class="nav-item d-flex p-2 login">
                 <% if(user) { %>
-                  <div class="button-search btn-warning mx-2">
+                  <div class="button-search btn-warning btn-res " id="dash" >
                     <a class="nav-link" href="/user/dashboard"><i class="far fa-clipboard"></i> Dashboard</a>
                   </div>
-                  <div class="button-search btn-warning ">
+                  <div class="button-search btn-warning btn-res" id="login-btn" >
                     <a class="nav-link" href="/user/logout"><i class="fas fa-power-off"></i> Logout</a>
                   </div>
                   
                   <% }else{ %>
-                  <div class="button-search btn-warning">
+                  <div class="button-search btn-warning btn-res ">
                     <a class="nav-link" href="/user/login"><i class="fas fa-power-off"></i> Login / Sign up</a>
                   </div>
                   <% } %>

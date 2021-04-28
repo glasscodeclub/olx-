@@ -25,6 +25,10 @@
     margin: 2%;
 }
 
+p{
+    white-space: normal;
+}
+
 div h1 {
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -81,7 +85,7 @@ div h1 {
         display: block;
         margin: 0 auto;
     }
-    .left, .rights{
+    .left , .right{
         width: 100%;
     }
 }
