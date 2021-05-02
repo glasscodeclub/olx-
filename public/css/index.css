@@ -32,8 +32,9 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
     margin-top: -3%;
-    padding-left: 8%;
+    padding-left: 0%;
     word-wrap:normal;
+    white-space: nowrap;
 }
 
 .landing-text h1{
@@ -65,7 +66,12 @@ body{
     border-radius:50px
 }
 
-
+@media only screen and (max-width:992px)
+{
+    .landing-text{
+        white-space: normal;
+    }
+}
 @media only screen and (max-width:540px)
 {
     body{
