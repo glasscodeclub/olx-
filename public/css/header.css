@@ -2,6 +2,8 @@
     min-width: 320px;
     z-index: 50;
     background-color: #3d8bfd;
+    top: 0;
+    position:sticky;
 }
 
 .Title-logo{

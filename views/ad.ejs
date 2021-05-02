@@ -63,8 +63,17 @@
                 </p>
                 
             </div>
-            <div class="related-ads">
-                
+            <div class="related-ads row">
+                <% for(var i = 0; i<3 ; i++) { %>
+                  <div class="card col mx-1" >
+                    <img src="/public/img/phone-2.jpg" class="card-img-top" alt="...">
+                    <div class="card-body">
+                      <h5 class="card-title">Card title</h5>
+                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                      <a href="#" class="btn btn-primary">Go somewhere</a>
+                    </div>
+                  </div>  
+                  <% } %>
             </div>
         </div>
     
@@ -87,7 +96,7 @@
                       <% if(messages[i].from == 'user') { %>
                       You:
                       <% }else{ %>
-                      Owner
+                      Owner:
                       <% } %>
                       <%=messages[i].message %>
                   </h4>
@@ -112,10 +121,11 @@
                 </div>
               </div>
               <% } %>
-          <div class="location"></div>
+          <div class="location">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14003.115004917378!2d77.06795844999999!3d28.666342649999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1619956259018!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+          </div>
         </div>
-    </div>
-
+      </div>
 </body>
 <script src="../public/js/ad.js"></script>
 </html>

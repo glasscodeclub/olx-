@@ -61,9 +61,18 @@
                 </p>
                 
             </div>
-            <div class="related-ads">
-                
-            </div>
+            <div class="related-ads row">
+              <% for(var i = 0; i<3 ; i++) { %>
+                <div class="card col mx-1" >
+                  <img src="/public/img/phone-2.jpg" class="card-img-top" alt="...">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                  </div>
+                </div>  
+                <% } %>
+          </div>
         </div>
         <input type="hidden" id="length" value="<%= messages.length %>">
 

@@ -88,8 +88,9 @@ form input{
 .profile-pic{
     width: 100px;
     /* height: 100px; */
-    border-radius: 50%;
+    border-radius: 20%;
     margin-bottom: 5px;
+    padding-bottom: 3%;
 }
 
 .submit-btn{
