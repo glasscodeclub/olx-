@@ -54,11 +54,26 @@
               <input type="text" class="form-control" id="floatingInput" name="name" placeholder="Name" required>
               <label for= "floatingInput" >Ad Name</label>
               <div class="invalid-feedback">This field is required</div>
-            </div>            
+            </div>
+            <div class="form-floating mb-3">
+              <textarea class="form-control" placeholder="description" id="floatingTextarea" required></textarea>
+              <label for="floatingTextarea">Description</label>
+              <div class="invalid-feedback">
+                Description can't be empty!
+              </div>
+            </div>
+            <div class="mb-3">
+              <label for="formFileMultiple" class="form-label">Photos:</label>
+              <input class="form-control" type="file" id="formFileMultiple" multiple required>
+              <div class="invalid-feedback">
+                Please input some photos!
+              </div>
+            </div>
+              <!-- </div>
+            </div>             -->
             <div class="post-ad-btn">
               <button type="submit" class="btn btn-warning button-search" id="post-ad">Submit</button>
             </div> 
-            
           </form>
         </div>
       </div>
@@ -71,7 +86,7 @@
               <div class="card-body">
                 <h5 class="card-title"><%=ads[i].name %></h5>
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="/user/ad/<%=ads[i].id %>/chats" class="btn btn-primary">Show Chats</a>
+                <a href="/user/ad/<%=ads[i].id %>/chats" class="btn btn-primary round-button ">Show Chats</a>
               </div>
             </div>
           <% } %>

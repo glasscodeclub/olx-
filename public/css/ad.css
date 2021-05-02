@@ -58,7 +58,7 @@ img{
 .related-ads{
     height: 30%;
     width: 100%;
-    background-color: #0d6efd;
+    /* background-color: #0d6efd; */
     border-radius: 5px;
 }
 
@@ -94,6 +94,10 @@ img{
     border-radius: 50px;
     height: 33.33px;
     outline: none;
+}
+
+input.message:focus {
+    border: 4px rgba(61, 139, 253, 0.5 ) solid;
 }
 
 .button-search{
@@ -134,8 +138,7 @@ img{
     color: #000;
 }
 
-.location{
-    background-color: yellow;
+.location iframe{
     height: 300px;
     width: 100%;
 }
